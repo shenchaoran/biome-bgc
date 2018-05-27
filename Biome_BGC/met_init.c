@@ -18,6 +18,9 @@ int met_init(file init, point_struct* point)
 	char keyword[80];
 	char junk_head[1024];
 
+	extern char *currentFN, *metFN;
+	currentFN = metFN;
+
 	/********************************************************************
 	**                                                                 **
 	** Begin reading initialization file block starting with keyword:  **

@@ -75,7 +75,7 @@ int scan_value (file ini, void *var, char type)
 
 {
     int ok_scan;
-    int ok=1;
+    int ok=1; 
 
     switch (type)
     {
@@ -123,9 +123,13 @@ int scan_open (file ini,file *target,char mode)
 	'o' for write ascii
 */
 {	
-	int ok=1;
+	int ok=1; 
+	extern char *currentFN;
 
-	if (scan_value(ini,target->name,'s'))
+	int scanSucceed = scan_value(ini, target->name, 's');
+	//memcpy(target->name, currentFN, strlen(currentFN));
+	strcpy(target->name, currentFN);
+	if (scanSucceed)
 	{
 		bgc_printf(BV_ERROR, "Error reading filename from %s... Exiting\n",ini.name);
 		ok=0;

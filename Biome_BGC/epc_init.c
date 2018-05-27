@@ -19,6 +19,8 @@ int epc_init(file init, epconst_struct* epc)
 	char key1[] = "EPC_FILE";
 	char key2[] = "ECOPHYS";
 	char keyword[80];
+	extern char *currentFN, *epcFN;
+	currentFN = epcFN;
 
 	/********************************************************************
 	**                                                                 **

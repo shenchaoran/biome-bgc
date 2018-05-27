@@ -22,7 +22,8 @@ units for annual precipitation as cm/year - the real units are mm/yr.
 int output_init(output_struct* output)
 {
   int ok = 1;
-	
+  extern char *currentFN, *outputFN;
+  currentFN = outputFN;
 	/* open outfiles if specified */
 	if (ok && output->dodaily)
 	{

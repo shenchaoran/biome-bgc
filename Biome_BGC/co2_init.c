@@ -19,6 +19,8 @@ int co2_init(file init, co2control_struct* co2, int simyears)
 	char junk[80];
 	file temp;
 	int reccount = 0;
+	extern char *currentFN, *co2FN;
+	currentFN = co2FN;
 	/********************************************************************
 	**                                                                 **
 	** Begin reading initialization file block starting with keyword:  **

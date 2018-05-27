@@ -17,6 +17,7 @@ int restart_init(file init, restart_ctrl_struct* restart)
 	char keyword[256];
 	char junk[256];
 	extern signed char cli_mode;
+	extern char *currentFN, *restartIFN, *restartOFN;
 
 
 	/********************************************************************
@@ -39,6 +40,7 @@ int restart_init(file init, restart_ctrl_struct* restart)
 	}
 	
 	/* check for input restart file */
+	currentFN = restartIFN;
 	if (ok && scan_value(init, &restart->read_restart, 'i'))
 	{
 		bgc_printf(BV_ERROR, "Error reading input restart flag\n");
@@ -51,6 +53,7 @@ int restart_init(file init, restart_ctrl_struct* restart)
 		restart->read_restart = 1;
 		
 	/* check for output restart file */
+	currentFN = restartOFN;
 	if (ok && scan_value(init, &restart->write_restart, 'i'))
 	{
 		bgc_printf(BV_ERROR, "Error reading output restart flag\n");

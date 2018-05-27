@@ -14,6 +14,8 @@ See copyright.txt for Copyright information
 
 char *argv_zero = NULL;
 signed char cli_mode = MODE_INI;
+char *iniFN, *metFN, *restartIFN, *restartOFN, *co2FN, *epcFN, *outputFN;
+char *currentFN;
 
 int main(int argc, char *argv[])
 {
@@ -51,10 +53,8 @@ int main(int argc, char *argv[])
 	argv_zero = (char *)malloc(strlen(argv[0])+1);
 	strncpy(argv_zero, argv[0], strlen(argv[0])+1);
 
-
 	// region scr
 	bgc_ascii = 1; // 默认输出 ascii 文件
-	char *iniFN, *metFN, *restartIFN, *restartOFN, *co2FN, *epcFN, *outputFN;
 	opterr = 0;
 	int option_index = 0;
 	char *optstring = "pVsl:v:ugmn:a";
@@ -141,54 +141,6 @@ int main(int argc, char *argv[])
 				break;
 		}
 	}
-	
-	/* Process command line arguments */
-	//while((c = getopt(argc, argv, "pVsl:v:ugmn:a")) != -1)
-	//{
-	//	switch(c)
-	//	{
-	//		case 'V':
-	//			bgc_printf(BV_ERROR, "BiomeBGC version %s (built %s %s by %s on %s)\n", VERS, __DATE__, __TIME__, USER, HOST);
-	//			exit(EXIT_SUCCESS);
-	//			break;
-	//		case 's':
-	//			bgc_verbosity = BV_SILENT;
-	//			break;
-	//		case 'v':
-	//			bgc_verbosity = bgc_verbosity_decode(optarg);
-	//			break;
-	//		case 'l':
-	//			bgc_logfile_setup(optarg);
-	//			bgc_printf(BV_DIAG, "Using logfile for output.\n");
-	//			break;
-	//		case 'p':
-	//			summary_sanity = SANE;
-	//			break;
-	//		case 'u':
-	//			cli_mode = MODE_SPINUP;
-	//			break;
-	//		case 'm':
-	//			cli_mode = MODE_MODEL;
-	//			break;
-	//		case 'g':
-	//			cli_mode = MODE_SPINNGO;
-	//			break;
-	//		case 'a':
-	//			bgc_ascii = 1;
-	//			break;
-	//		case 'n':  /* Nitrogen deposition file */
-	//			strcpy(ndep_file.name,optarg);
-	//			bgc_printf(BV_DIAG,"Using annual NDEP file: %s\n",ndep_file.name);
-	//			readndepfile = 1;
-	//			bgcin.ndepctrl.varndep = 1;
-	//			break;
-	//			
-	//		case '?':
-	//			break;
-	//		default:
-	//			break;
-	//		}
-	//}
 	// endregion
 
 	bgc_printf(BV_DIAG, "Verbosity Level Set To: %d\n", bgc_verbosity);
@@ -235,13 +187,11 @@ int main(int argc, char *argv[])
 
 	/* read the name of the main init file from the command line
 	and store as init.name */
-	//if (optind > argc)
 	if (optind > argc)
 	{
 		bgc_print_usage();
 		exit(EXIT_FAILURE);
 	}
-	//strcpy(init.name, argv[optind]);
 	strcpy(init.name, iniFN);
 	
 	/* open the main init file for ascii read and check for errors */

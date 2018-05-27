@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommandArguments>-a --ri=ri --ro=ro --co2=co2 --epc=epc --i=i --o=o --m=m</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-a --i=E:\Data\Biome_BGC_Data\ini\1.ini --m=E:\Data\Biome_BGC_Data\metdata\1.mtc43 --ri=E:\Data\Biome_BGC_Data\restart\1.endpoint --ro=E:\Data\Biome_BGC_Data\restart\1.endpoint --co2=E:\Data\Biome_BGC_Data\co2\co2.txt --epc=E:\Data\Biome_BGC_Data\epc\shrub.epc --o=E:\Data\Biome_BGC_Data\outputs\test</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

@@ -28,6 +28,8 @@ int output_ctrl(file init, output_struct* output)
 	char key3[] = "ANNUAL_OUTPUT";
 	char keyword[80];
 	extern signed char cli_mode;
+	extern char *currentFN, *outputFN;
+	currentFN = outputFN;
 
 	/********************************************************************
 	**                                                                 **
@@ -54,6 +56,7 @@ int output_ctrl(file init, output_struct* output)
 		bgc_printf(BV_ERROR, "Error reading outfile prefix: output_ctrl(), output_ctrl.c\n");
 		ok=0;
 	}
+	strcpy(output->outprefix, currentFN);
 	/* scan flags for daily output */
 	if (ok && scan_value(init, &output->dodaily, 'i'))
 	{
