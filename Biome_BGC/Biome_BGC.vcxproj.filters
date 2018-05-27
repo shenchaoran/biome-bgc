@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="annual_rates.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="atm_pres.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="baresoil_evap.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bgc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bgc_io.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="canopy_et.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="check_balance.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="co2_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="daily_allocation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="daymet.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dayphen.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decomp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="end_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="epc_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="firstday.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="get_co2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="get_ndep.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="getopt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="growth_resp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ini.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="maint_resp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="make_zero_flux_struct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="met_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="metarr_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mortality.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ndep_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="nleaching.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="outflow.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="output_ascii.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="output_ctrl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="output_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="output_map_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="phenology.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="photosynthesis.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pointbgc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="prcp_route.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="precision_control.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="prephenology.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="presim_state_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="radtrans.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ramp_ndep_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="restart_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="restart_io.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="scc_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sitec_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="smooth.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="snowmelt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="soilpsi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="state_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="state_update.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="summary.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="time_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="zero_srcsnk.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bgc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bgc_constants.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bgc_epclist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bgc_func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bgc_io.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bgc_struct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="getopt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ini.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc_func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pointbgc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pointbgc_func.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pointbgc_struct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tailor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
