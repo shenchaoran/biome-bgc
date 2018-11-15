@@ -830,8 +830,7 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 			{
 /*				printf(ctrl.ndayout);*/
 				/* write the daily output array to daily output file */
-				if (fwrite(dayarr, sizeof(float), ctrl.ndayout, bgcout->dayout.ptr)
-					!= (size_t)ctrl.ndayout)
+				if (fwrite(dayarr, sizeof(float), ctrl.ndayout, bgcout->dayout.ptr) != (size_t)ctrl.ndayout)
 				{
 					bgc_printf(BV_ERROR, "Error writing to %s: simyear = %d, simday = %d\n",
 						bgcout->dayout.name,simyr,yday);
