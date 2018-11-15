@@ -17,6 +17,7 @@ Revisions since 4.1.2
 */
 
 #include "bgc.h"
+#include <stdio.h>
 
 /* These DEBUG defines are now depricated. Please use 
    bgc_printf(BV_DIAG,...) instead. The only place where 
@@ -371,6 +372,7 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 		if (mode == MODE_MODEL)
 		{
 			/* output to screen to indicate start of simulation year */
+			printf("-----Progress:%3d%%-----\n", simyr * 100 / tmpyears);
 			if (ctrl.onscreen) bgc_printf(BV_DETAIL, "Year: %6d\n",ctrl.simstartyear+simyr);
 		}
 		else if (mode == MODE_SPINUP)

@@ -492,7 +492,7 @@ int main(int argc, char *argv[])
 
 	bgc_logfile_finish();
 	free(argv_zero);
-	printf("-----Progress:-----");
+	printf("-----Progress:100%-----");
 	return EXIT_SUCCESS;
 } /* end of main */
 	
