@@ -42,8 +42,9 @@ typedef struct
 	file annavgout;         /* file containing annual average output */
 	file annout;            /* file containing annual output */
 	file anntext;           /* file containing simple annual text output */
-	file dayoutascii;	/* file containing daily ascii output */
-	file monoutascii;	/* file containing monthly ascii output */
+	
+    file dayoutascii;	/* file containing daily ascii output */
+	file monavgascii;	/* file containing monthly ascii output */
 	file annoutascii;	/* file containing annual ascii output */
 	
 	double spinup_resid_trend; /* kgC/m2/yr remaining trend after spinup */

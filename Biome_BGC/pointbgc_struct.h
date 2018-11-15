@@ -60,7 +60,7 @@ typedef struct
     file annout;           /* annual output file */
 	file anntext;          /* simple annual text output */
 	file dayoutascii;	/* ASCII daily output file */
-	file monoutascii;	/* ASCII monthly output file */
+	file monavgascii;	/* ASCII monthly output file */
 	file annoutascii;	/* ASCII annual output file */
 	unsigned char bgc_ascii;	
 } output_struct;

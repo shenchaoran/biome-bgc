@@ -291,9 +291,6 @@ int main(int argc, char *argv[])
 	if (output.domonavg) bgcout.monavgout = output.monavgout;
 	if (output.doannavg) bgcout.annavgout = output.annavgout;
 	if (output.doannual) bgcout.annout = output.annout;
-	if (output.bgc_ascii && output.dodaily) bgcout.dayoutascii = output.dayoutascii;
-	if (output.bgc_ascii && output.domonavg) bgcout.monoutascii = output.monoutascii;
-	if (output.bgc_ascii && output.doannual) bgcout.annoutascii = output.annoutascii;
 	bgcout.anntext = output.anntext;
 	bgcout.bgc_ascii = bgc_ascii;
 	
@@ -382,9 +379,6 @@ int main(int argc, char *argv[])
 		if (output.domonavg) bgcout.monavgout = output.monavgout;
 		if (output.doannavg) bgcout.annavgout = output.annavgout;
 		if (output.doannual) bgcout.annout = output.annout;
-		if (output.bgc_ascii && output.dodaily) bgcout.dayoutascii = output.dayoutascii;
-		if (output.bgc_ascii && output.domonavg) bgcout.monoutascii = output.monoutascii;
-		if (output.bgc_ascii && output.doannual) bgcout.annoutascii = output.annoutascii;
 		if (output.bgc_ascii && output.doannual) bgcout.anntext = output.anntext;
 		
 		/* initialize output files. Does nothing in spinup mode*/
@@ -436,9 +430,6 @@ int main(int argc, char *argv[])
 	if (output.doannavg) fclose(output.annavgout.ptr);
 	if (output.doannual) fclose(output.annout.ptr);
 	/* Close the ASCII output files */
-	if (output.bgc_ascii && output.dodaily) fclose(output.dayoutascii.ptr);
-	if (output.bgc_ascii && output.domonavg) fclose(output.monoutascii.ptr);
-	if (output.bgc_ascii && output.doannual) fclose(output.annoutascii.ptr);
 	
 	if ( output.bgc_ascii && output.doannual && (fclose(output.anntext.ptr) != 0))
 	{

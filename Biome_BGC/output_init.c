@@ -28,7 +28,7 @@ int output_init(output_struct* output)
 	if (ok && output->dodaily)
 	{
 		strcpy(output->dayout.name,output->outprefix);
-		strcat(output->dayout.name,".dayout");
+		strcat(output->dayout.name,".dayout.ascii");
 		if (file_open(&(output->dayout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening daily outfile (%s) in output_ctrl()\n",output->dayout.name);
@@ -43,7 +43,7 @@ int output_init(output_struct* output)
 	if (ok && output->domonavg)
 	{
 		strcpy(output->monavgout.name,output->outprefix);
-		strcat(output->monavgout.name,".monavgout");
+		strcat(output->monavgout.name,".monavgout.ascii");
 		if (file_open(&(output->monavgout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening monthly average outfile (%s) in output_ctrl()\n",output->monavgout.name);
@@ -53,7 +53,7 @@ int output_init(output_struct* output)
 	if (ok && output->doannavg)
 	{
 		strcpy(output->annavgout.name,output->outprefix);
-		strcat(output->annavgout.name,".annavgout");
+		strcat(output->annavgout.name,".annavgout.ascii");
 		if (file_open(&(output->annavgout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening annual average outfile (%s) in output_ctrl()\n",output->annavgout.name);
@@ -63,57 +63,13 @@ int output_init(output_struct* output)
 	if (ok && output->doannual)
 	{
 		strcpy(output->annout.name,output->outprefix);
-		strcat(output->annout.name,".annout");
+		strcat(output->annout.name,".annout.ascii");
 		if (file_open(&(output->annout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening annual outfile (%s) in output_ctrl()\n",output->annout.name);
 			ok=0;
 		}
 	}
-	/****************************************/
-	/*					*/
-	/* 		ASCII Outputs		*/
-	/*					*/
-	/****************************************/
-		
-	/* open daily ascii output files if specified */
-	if (ok && output->bgc_ascii && output->dodaily)
-	{
-		strcpy(output->dayoutascii.name,output->outprefix);
-		strcat(output->dayoutascii.name,".dayout.ascii");
-		if (file_open(&(output->dayoutascii),'o'))
-		{
-			bgc_printf(BV_ERROR, "Error opening daily ascii outfile (%s) in output_ctrl()\n",output->dayoutascii.name);
-			ok=0;
-		}
-	}
-	
-	if (ok && output->bgc_ascii && output->domonavg)
-	{
-		strcpy(output->monoutascii.name,output->outprefix);
-		strcat(output->monoutascii.name,".monavgout.ascii");
-		if (file_open(&(output->monoutascii),'o'))
-		{
-			bgc_printf(BV_ERROR, "Error opening monthly ascii outfile (%s) in output_ctrl()\n",output->monoutascii.name);
-			ok=0;
-		}
-	}
-	if (ok && output->bgc_ascii && output->doannual)
-	{
-		strcpy(output->annoutascii.name,output->outprefix);
-		strcat(output->annoutascii.name,".annout.ascii");
-		if (file_open(&(output->annoutascii),'o'))
-		{
-			bgc_printf(BV_ERROR, "Error opening annual ascii outfile (%s) in output_ctrl()\n",output->annoutascii.name);
-			ok=0;
-		}
-	}
-	
-	/****************************************/
-	/*					*/
-	/* 	End ASCII Outputs		*/
-	/*					*/
-	/****************************************/
 	
 	/* Yeah, we need make this not happen on spinup */
 	/* Spinngo is going to make this look like doodoo */

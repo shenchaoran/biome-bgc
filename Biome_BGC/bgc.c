@@ -830,6 +830,12 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 			{
 /*				printf(ctrl.ndayout);*/
 				/* write the daily output array to daily output file */
+				
+				// region scr modified
+                output_ascii(dayarr, ctrl.ndayout, bgcout->dayout.ptr);
+				bgc_printf(BV_DIAG, "%d\t%d\tdone daily output\n", simyr, yday);
+
+				/*
 				if (fwrite(dayarr, sizeof(float), ctrl.ndayout, bgcout->dayout.ptr) != (size_t)ctrl.ndayout)
 				{
 					bgc_printf(BV_ERROR, "Error writing to %s: simyear = %d, simday = %d\n",
@@ -843,7 +849,8 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 				
 					output_ascii(dayarr,ctrl.ndayout,bgcout->dayoutascii.ptr);
 				
-				}
+				}*/
+				// endregion
 				
 			}
 			/*******************/
@@ -904,7 +911,10 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 					}
 					
 					/* write to file */
-					if (fwrite(monavgarr, sizeof(float), ctrl.ndayout, bgcout->monavgout.ptr)
+					// region scr modified
+                    output_ascii(monavgarr, ctrl.ndayout, bgcout->monavgout.ptr);
+
+					/*if (fwrite(monavgarr, sizeof(float), ctrl.ndayout, bgcout->monavgout.ptr)
 						!= (size_t)ctrl.ndayout)
 					{
 						bgc_printf(BV_ERROR, "Error writing to %s: simyear = %d, simday = %d\n",
@@ -914,9 +924,10 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 					
 					if(ok && bgcout->bgc_ascii)
 					{
-						output_ascii(monavgarr,ctrl.ndayout, bgcout->monoutascii.ptr);
+						output_ascii(monavgarr,ctrl.ndayout, bgcout->monavgascii.ptr);
 						
-					}
+					}*/
+					// endregion
 					
 					/* reset monthly average variables for next month */
 					for (outv=0 ; outv<ctrl.ndayout ; outv++)
@@ -976,13 +987,16 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 					}
 					
 					/* write to file */
-					if (fwrite(annavgarr, sizeof(float), ctrl.ndayout, bgcout->annavgout.ptr)
+					// region scr modified
+                    output_ascii(annavgarr, ctrl.ndayout, bgcout->annavgout.ptr);
+					/*if (fwrite(annavgarr, sizeof(float), ctrl.ndayout, bgcout->annavgout.ptr)
 						!= (size_t)ctrl.ndayout)
 					{
 						bgc_printf(BV_ERROR, "Error writing to %s: simyear = %d, simday = %d\n",
 							bgcout->annavgout.name,simyr,yday);
 						ok=0;
-					}
+					}*/
+					//endregion
 					
 					/* reset annual average variables for next month */
 					for (outv=0 ; outv<ctrl.ndayout ; outv++)
@@ -1041,7 +1055,9 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 				annarr[outv] = (float) *output_map[ctrl.anncodes[outv]];
 			}
 			/* write the annual output array to annual output file */
-			if (fwrite(annarr, sizeof(float), ctrl.nannout, bgcout->annout.ptr)
+			// region scr modified
+            output_ascii(annarr, ctrl.nannout, bgcout->annout.ptr);
+			/*if (fwrite(annarr, sizeof(float), ctrl.nannout, bgcout->annout.ptr)
 				!= (size_t)ctrl.nannout)
 			{
 				bgc_printf(BV_ERROR, "Error writing to %s: simyear = %d, simday = %d\n",
@@ -1054,7 +1070,8 @@ int bgc(bgcin_struct* bgcin, bgcout_struct* bgcout, int mode)
 			
 				output_ascii(annarr,ctrl.nannout,bgcout->annoutascii.ptr);
 				
-			}
+			}*/
+			// endregion
 			bgc_printf(BV_DIAG, "%d\t%d\tdone annual output\n",simyr,yday);
 		}
 		
