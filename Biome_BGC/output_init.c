@@ -28,7 +28,7 @@ int output_init(output_struct* output)
 	if (ok && output->dodaily)
 	{
 		strcpy(output->dayout.name,output->outprefix);
-		strcat(output->dayout.name,".dayout.ascii");
+		strcat(output->dayout.name,".daily.ascii");
 		if (file_open(&(output->dayout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening daily outfile (%s) in output_ctrl()\n",output->dayout.name);
@@ -43,7 +43,7 @@ int output_init(output_struct* output)
 	if (ok && output->domonavg)
 	{
 		strcpy(output->monavgout.name,output->outprefix);
-		strcat(output->monavgout.name,".monavgout.ascii");
+		strcat(output->monavgout.name,".monthly-avg.ascii");
 		if (file_open(&(output->monavgout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening monthly average outfile (%s) in output_ctrl()\n",output->monavgout.name);
@@ -53,7 +53,7 @@ int output_init(output_struct* output)
 	if (ok && output->doannavg)
 	{
 		strcpy(output->annavgout.name,output->outprefix);
-		strcat(output->annavgout.name,".annavgout.ascii");
+		strcat(output->annavgout.name,".annual-avg.ascii");
 		if (file_open(&(output->annavgout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening annual average outfile (%s) in output_ctrl()\n",output->annavgout.name);
@@ -63,7 +63,7 @@ int output_init(output_struct* output)
 	if (ok && output->doannual)
 	{
 		strcpy(output->annout.name,output->outprefix);
-		strcat(output->annout.name,".annout.ascii");
+		strcat(output->annout.name,".annual.ascii");
 		if (file_open(&(output->annout),'w'))
 		{
 			bgc_printf(BV_ERROR, "Error opening annual outfile (%s) in output_ctrl()\n",output->annout.name);
@@ -77,7 +77,7 @@ int output_init(output_struct* output)
 	{
 		/* simple text output */
 		strcpy(output->anntext.name,output->outprefix);
-		strcat(output->anntext.name,"_ann.txt");
+		strcat(output->anntext.name,".summary.ascii");
 		if (file_open(&(output->anntext),'o'))
 		{
 			bgc_printf(BV_ERROR, "Error opening annual text file (%s) in output_ctrl()\n",output->anntext.name);
