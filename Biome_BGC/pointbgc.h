@@ -14,17 +14,14 @@ Andrew A Neuschwander, andrew@ntsg.umt.edu
 
 #include <time.h>
 
+#define VERS "4.2"
+
 #ifndef WIN32
 #include <getopt.h>
 #endif
 
-#ifndef WIN32
-#include <getopt2.h>
-#endif
-
 #ifdef WIN32
 #include "getopt.h"
-#define VERS "4.2"
 #define USER "unknow"
 #define HOST "Windows"
 #endif
