@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 			break;
 
 		case 'V':
-			bgc_printf(BV_ERROR, "BiomeBGC version %s (built %s %s by %s on %s)\n", VERS, __DATE__, __TIME__, USER, HOST);
+			//bgc_printf(BV_ERROR, "BiomeBGC version %s (built %s %s by %s on %s)\n", VERS, __DATE__, __TIME__, USER, HOST);
 			exit(EXIT_SUCCESS);
 			break;
 		case 's':
