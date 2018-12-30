@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/Debug\\Biome_BGC.js",
+            "args": [
+                "--i=../bat/test.ini",
+                "--m=../bat/metdata/test.mtc43",
+                "--ri=../bat/restart/test.endpoint",
+                "--ro=../bat/restart/test.endpoint",
+                "--co2=../bat/co2/co2.txt",
+                "--epc=../bat/epc/shrub.epc",
+                "--o=../bat/outputs/test"
+            ]
+        }
+    ]
+}
