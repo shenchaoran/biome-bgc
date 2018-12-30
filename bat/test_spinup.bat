@@ -1,0 +1,2 @@
+cd ..\Release
+Biome_BGC.exe -a --i=..\bat\test_spinup.ini --m=..\bat\metdata\test.mtc43 --ri=..\bat\restart\test.endpoint --ro=..\bat\restart\test.endpoint --co2=..\bat\co2\co2.txt --epc=..\bat\epc\shrub.epc --o=..\bat\outputs\test_spinup

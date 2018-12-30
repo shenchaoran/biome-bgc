@@ -4,11 +4,10 @@ Biome_BGC.suo
 Biome_BGC.VC.db
 Biome_BGC.VC.VC.opendb
 .vs
-bat
 build
-Debug
+/Debug/Biome_BGC.exe
 ipch
-Release
+/Release/Biome_BGC.exe
 Biome_BGC/Release
 /BiomeBGC_v411_release.pdf
 /Biome-bgc_official_source_code
