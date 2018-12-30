@@ -28,7 +28,7 @@ else {
     process.exit(1);
 }
 
-let exePath = path.join(__dirname, 'Biome_BGC.exe');
+let exePath = path.join(__dirname, 'Biome_BGC');
 let spinupI = String.prototype.replace.call(argv.i, '.ini', '_spinup.ini');
 let getIPath = iPath => `${exePath} -a --i=${iPath} --m=${argv.m} --co2=${argv.co2} \
 --epc=${argv.epc} --ri=${argv.o}.endpoint --ro=${argv.o}.endpoint --o=${argv.o}`;

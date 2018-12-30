@@ -6,7 +6,7 @@ COMPILE_OPTIONS = -lm
 
 SPATH = ./Biome_BGC
 OBJPATH = ./build
-DPATH = ./debug
+DPATH = ./Debug
 
 HEADERS = $(wildcard $(SPATH)/*.h)
 SRC = $(wildcard $(SPATH)/*.c)
