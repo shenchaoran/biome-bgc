@@ -17,3 +17,13 @@ Biome_BGC.opensdf
 Biome_BGC/Biome_BGC.vcxproj
 Biome_BGC/Biome_BGC.vcxproj
 Debug/Biome_BGC
+bat/outputs/test
+.annual-avg.ascii
+bat/outputs/test
+.annual.ascii
+bat/outputs/test
+.daily.ascii
+bat/outputs/test
+.endpoint
+bat/outputs/test
+.summary.ascii
